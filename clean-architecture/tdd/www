@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+// TODO: add logger
+const createServer = require('./create-server');
+
+const start = async () => {
+  try {
+
+    const server = await createServer();
+    await server.start();
+
+    console.info('Server running at %s', server.info.uri);
+
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+};
+
+function exitOnSignal(signal) {
+  console.info(`Received signal ${signal}. Closing DB connections before exiting.`);
+  disconnect().then(() => {
+    process.exit(0);
+  }).catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+process.on('SIGTERM', () => { exitOnSignal('SIGTERM'); });
+process.on('SIGINT', () => { exitOnSignal('SIGINT'); });
+
+start();

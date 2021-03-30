@@ -1,0 +1,28 @@
+{
+  "name": "tdd-clean-archi",
+  "version": "1.0.0",
+  "description": "Inside out or outside in ?",
+  "main": "server.js",
+  "engines": {
+    "node": "15.6.0",
+    "npm": "7.4.0"
+  },
+  "scripts": {
+    "preinstall": "npx check-engine",
+    "start": "node www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.1",
+    "@hapi/hapi": "^20.0.3",
+    "blipp": "^4.0.2",
+    "chai": "^4.2.0",
+    "check-engine": "^1.10.0",
+    "http-codes": "^1.0.0",
+    "joi": "^17.3.0",
+    "jsonapi-serializer": "^3.6.6",
+    "lodash": "^4.17.20",
+    "mocha": "^8.2.1"
+  }
+}

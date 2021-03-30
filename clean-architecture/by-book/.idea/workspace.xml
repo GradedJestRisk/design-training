@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3962d03-0380-4a3a-a8f0-2073420c2904" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/entities/Car.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/frameworks-drivers/identifier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/frameworks-drivers/orm-models/vehicle-model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/frameworks-drivers/routes/car-route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/frameworks-drivers/routes/vehicle-route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/frameworks-drivers/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/interface-adapters/car-serializer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/interface-adapters/controller/car-controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/interface-adapters/controller/vehicle-controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/interface-adapters/gateway/car-gateway.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/interface-adapters/gateway/vehicle-gateway.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/usecases/create-car-usecase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/usecases/read-car-usecase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/usecases/read-vehicle-usecase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/actual-db-client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/database-connexion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/db-client-configuration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/db-client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/initialize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/acceptance/car-test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/acceptance/vehicle-test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test-helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/.idea/tdd.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/.nvmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/configuration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/create-server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/domain-errors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/error-mapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/error-serializer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/http-errors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/pre-response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/routes/healthcheck/healthcheck-controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/routes/healthcheck/healthcheck-route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/routes/hello/hello-controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/routes/hello/hello-route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/routes/hello/hello-use-case.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/tests/hello-route-tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tdd/www" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1qSwz1ohH2fJdUVGWtUqCY4sFiD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3962d03-0380-4a3a-a8f0-2073420c2904" name="Default Changelist" comment="" />
+      <created>1617086558033</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617086558033</updated>
+      <workItem from="1617086562868" duration="300000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
