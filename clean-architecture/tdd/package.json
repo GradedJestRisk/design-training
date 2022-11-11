@@ -23,6 +23,6 @@
     "joi": "^17.3.0",
     "jsonapi-serializer": "^3.6.6",
     "lodash": "^4.17.20",
-    "mocha": "^8.2.1"
+    "mocha": "^10.1.0"
   }
 }
