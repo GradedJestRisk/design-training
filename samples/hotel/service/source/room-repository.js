@@ -4,4 +4,5 @@ const get = async () => {
   const rooms = await knex.from('rooms').select();
   return rooms;
 };
+
 export { get };
