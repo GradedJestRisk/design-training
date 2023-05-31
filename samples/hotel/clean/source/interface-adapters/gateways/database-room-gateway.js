@@ -4,4 +4,9 @@ const save = async function (rooms) {
   await knex.from('rooms').insert(rooms);
 };
 
-export { save };
+const get = async function () {
+  const rooms = await knex.from('rooms').select();
+  return rooms;
+};
+
+export { save, get };

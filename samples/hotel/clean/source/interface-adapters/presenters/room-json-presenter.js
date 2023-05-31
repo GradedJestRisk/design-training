@@ -1,4 +1,4 @@
-const roomJsonPresenter = class {
+const RoomJsonPresenter = class {
   constructor() {
     this.rooms = '';
   }
@@ -10,4 +10,4 @@ const roomJsonPresenter = class {
   }
 };
 
-export { roomJsonPresenter };
+export { RoomJsonPresenter };

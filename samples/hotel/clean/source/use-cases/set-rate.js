@@ -1,6 +1,6 @@
 import { Room } from '../entities/Room.js';
-const setRate = function ({ roomRepository, roomPresenter, baseRate }) {
-  const roomsDTO = roomRepository.get();
+const setRate = async function ({ roomGateway, roomPresenter, baseRate }) {
+  const roomsDTO = await roomGateway.get();
   const rooms = roomsDTO.map(({ number, floor, rate }) => {
     return new Room({ number, floor, rate });
   });
@@ -11,7 +11,7 @@ const setRate = function ({ roomRepository, roomPresenter, baseRate }) {
   const updatedRoomsDTO = updatedRooms.map(({ number, floor, rate }) => {
     return { number, floor, rate };
   });
-  roomRepository.save(updatedRoomsDTO);
+  await roomGateway.save(updatedRoomsDTO);
   roomPresenter.execute(updatedRoomsDTO);
 };
 export { setRate };

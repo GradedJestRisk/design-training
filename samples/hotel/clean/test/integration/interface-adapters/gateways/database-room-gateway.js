@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import { knex } from '../../../../database/database-client.js';
-import { save } from '../../../../source/interface-adapters/gateways/room-gateway.js';
+import { save, get } from '../../../../source/interface-adapters/gateways/database-room-gateway.js';
 
 describe('Integration | Gateway | room-gateway', function () {
-  describe('save', function () {
+  describe('#save', function () {
     context('if the record does not exist', function () {
       it('should create it', async function () {
         // given
@@ -33,6 +33,21 @@ describe('Integration | Gateway | room-gateway', function () {
         const actual = await knex.from('rooms').select();
         const expected = [{ floor: 0, number: 1, price: 100 }];
         expect(actual).to.deep.equal(expected);
+      });
+    });
+  });
+  describe('#get', function () {
+    context('if a record exist', function () {
+      it('should return it', async function () {
+        // given
+        await knex('rooms').delete();
+        await knex.from('rooms').insert({ floor: 0, number: 1, price: 50 });
+
+        // when
+        const actual = await get();
+
+        // then
+        expect(actual).to.deep.equal([{ floor: 0, number: 1, price: 50 }]);
       });
     });
   });

@@ -12,8 +12,7 @@
     "database:migrations:create": "knex --knexfile database/knexfile.js migrate:make $migrationname",
     "lint": "eslint .",
     "preinstall": "check-engine",
-    "start:cli": "node source/cli.js",
-    "start:web": "node source/web.js",
+    "start": "node index.js",
     "test": "mocha --recursive --reporter=dot --exit ./test"
   },
   "license": "ISC",
