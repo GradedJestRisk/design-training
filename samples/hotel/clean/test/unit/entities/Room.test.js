@@ -10,7 +10,7 @@ import { Room } from '../../../source/entities/Room.js';
 
 // Ceiling to 200€
 
-describe('Unit | Room', function () {
+describe('Unit | Entities | Room', function () {
   describe('setRate', function () {
     context('when the rate is below ceiling rate', function () {
       context('when the room is on the ground floor', function () {
