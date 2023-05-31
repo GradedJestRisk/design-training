@@ -1,0 +1,46 @@
+{
+  "extends": [
+    "plugin:mocha/recommended",
+    "plugin:node/recommended-module",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "requireConfigFile": false,
+    "babelOptions": {
+      "parserOpts": {
+        "plugins": [
+          "importAssertions"
+        ]
+      }
+    }
+  },
+  "parser": "@babel/eslint-parser",
+  "globals": {
+    "include": true
+  },
+  "plugins": [
+    "node",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": "error",
+    "no-sync": "error",
+    "mocha/no-exclusive-tests": "error",
+    "mocha/no-pending-tests": "error",
+    "mocha/no-skipped-tests": "error",
+    "mocha/no-top-level-hooks": "error",
+    "no-empty-function": "error",
+    "node/no-process-exit": "error",
+    "node/no-unpublished-import": [
+      "error",
+      {
+        "allowModules": [
+          "chai"
+        ]
+      }
+    ]
+  }
+}

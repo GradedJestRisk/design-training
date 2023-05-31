@@ -1,0 +1,39 @@
+{
+  "name": "clean",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "v20.0.0",
+    "npm": "9.6.4"
+  },
+  "scripts": {
+    "database:seed": "knex --knexfile database/knexfile.js seed:run",
+    "database:migrations:apply": "knex --knexfile database/knexfile.js migrate:latest",
+    "database:migrations:create": "knex --knexfile database/knexfile.js migrate:make $migrationname",
+    "lint": "eslint .",
+    "preinstall": "check-engine",
+    "start:cli": "node source/cli.js",
+    "start:web": "node source/web.js",
+    "test": "mocha --recursive --reporter=dot --exit ./test"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.21.3",
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.8",
+    "sinon": "^15.0.4"
+  },
+  "dependencies": {
+    "check-engine": "^1.11.0",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0"
+  }
+}
