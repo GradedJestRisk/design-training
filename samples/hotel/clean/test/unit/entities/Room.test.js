@@ -32,13 +32,13 @@ describe('Unit | Entities | Room', function () {
           // given
           const floor = 1;
           const room = new Room({ number: 1, floor, rate: 50 });
-          const baseRate = 200;
+          const baseRate = 110;
 
           // when
           room.setRate({ baseRate });
 
           // then
-          expect(room.rate).to.equal(214);
+          expect(room.rate).to.equal(117.7);
         });
       });
       context('when the room is on the second floor', function () {

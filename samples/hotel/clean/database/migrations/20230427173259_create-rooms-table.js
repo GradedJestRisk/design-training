@@ -2,7 +2,7 @@ const up = async function (knex) {
   function table(t) {
     t.integer('number').primary();
     t.integer('floor').notNullable();
-    t.double('price').notNullable();
+    t.double('rate').notNullable();
   }
 
   await knex.schema.createTable('rooms', table);
