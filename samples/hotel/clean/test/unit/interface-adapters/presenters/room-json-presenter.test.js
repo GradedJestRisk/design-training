@@ -1,4 +1,9 @@
 import { expect } from 'chai';
+import sinonChai from 'sinon-chai';
+chai.use(sinonChai);
+// eslint-disable-next-line node/no-unpublished-import
+import { stub } from 'sinon';
+
 import { RoomJsonPresenter } from '../../../../source/interface-adapters/presenters/room-json-presenter.js';
 
 describe('Unit | Presenters | room-json-presenter', function () {

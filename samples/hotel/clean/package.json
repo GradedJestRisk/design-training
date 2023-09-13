@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "preinstall": "check-engine",
     "start": "node index.js",
-    "test": "mocha --recursive --reporter=dot --exit ./test"
+    "test": "npm run database:migrations:apply && mocha --recursive --reporter=dot --exit ./test"
   },
   "license": "ISC",
   "devDependencies": {
