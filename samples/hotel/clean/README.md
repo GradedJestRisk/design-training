@@ -1,6 +1,9 @@
 ## Setup
+
 Install: `npm ci` 
-Start database local server : `docker-compose up --detach`
+
+Start database local server : `docker compose up --detach --wait`
+
 Create schema: `npm run database:migrations:apply`
 
 ## Tests

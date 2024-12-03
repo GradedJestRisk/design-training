@@ -1,11 +1,16 @@
-version: '3'
-
 services:
   postgres:
-    image: postgres:14.6-alpine
+    image: postgres:17-alpine
     container_name: service-database-container
     ports:
-      - '5432:5432'
+      - '5433:5432'
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
-      POSTGRES_USER: service-user
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: hotel
+    healthcheck:
+      test: "psql --dbname \"host=localhost port=5433 dbname=hotel user=user password=password\""
+      interval: 2s
+      timeout: 10s
+      retries: 10
