@@ -1,0 +1,16 @@
+services:
+
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgresql
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database
+    healthcheck:
+      test: "psql --dbname \"host=localhost port=5432 dbname=database user=username password=password\""
+      interval: 1s
+      timeout: 10s
+      retries: 20

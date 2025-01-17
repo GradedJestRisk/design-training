@@ -1,0 +1,22 @@
+set shell := ["zsh", "-c"]
+
+setup :
+  nvm use
+  npm ci
+
+start-database :
+  docker compose up --detach --renew-anon-volumes --force-recreate --wait
+  npm run database:migrations:apply
+  npm run database:seed
+
+start-web-server :
+  node source/web.js
+
+request-web-server :
+  curl localhost:3000/rooms | jq -r
+
+start-cli :
+  node source/cli.js
+
+get-database-console :
+  psql --dbname "host=localhost port=5432 dbname=username user=username"
