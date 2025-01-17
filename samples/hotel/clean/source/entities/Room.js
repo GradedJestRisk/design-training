@@ -1,10 +1,12 @@
 const CEILING_RATE = 200;
+
 const Room = class {
   constructor({ number, floor, rate }) {
     this.number = number;
     this.floor = floor;
     this.rate = rate;
   }
+
   setRate({ baseRate }) {
     let newRate;
     if (this.floor === 0) {

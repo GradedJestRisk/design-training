@@ -3,10 +3,10 @@ const RoomJsonPresenter = class {
     this.rooms = '';
   }
   execute(rooms) {
-    this.rooms = JSON.stringify({ rooms });
+    this.rooms = rooms;
   }
   get() {
-    return this.rooms;
+    return JSON.stringify({ rooms: this.rooms });
   }
 };
 
