@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "preinstall": "check-engine",
-    "test": "mocha --recursive --reporter=dot --exit test"
+    "test": "mocha --recursive --reporter=dot --exit formule abonnement"
   },
   "license": "ISC",
   "devDependencies": {
