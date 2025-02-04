@@ -1,0 +1,31 @@
+{
+  "name": "ddd",
+  "type": "module",
+  "engines": {
+    "node": "23.7.0",
+    "npm": "10.9.2"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "preinstall": "check-engine",
+    "test": "mocha --recursive --reporter=dot --exit test"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.26.5",
+    "@babel/plugin-syntax-import-assertions": "^7.26.0",
+    "chai": "^5.1.2",
+    "eslint": "8.39.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-mocha": "^10.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "mocha": "^11.1.0",
+    "prettier": "^3.4.2"
+  },
+  "dependencies": {
+    "check-engine": "^1.14.0"
+  }
+}
