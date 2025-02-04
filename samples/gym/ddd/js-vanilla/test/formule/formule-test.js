@@ -1,34 +1,34 @@
 import { expect } from 'chai';
 import { Formules } from '../../src/formule/Formules.js';
+import { TypeAbonnement } from '../../src/formule/TypeAbonnement.js';
+import { PrixBase } from '../../src/formule/PrixBase.js';
 
-describe('Unitaire - formule', function () {
-  describe('Le gérant peut créer des formules', function () {
-    // Le gérant peut créer des formules au mois ou à l’année, avec un prix de base
-    context('Au mois, avec un prix de base', function () {
-      it('should succeed', function () {
+describe('Unitaire - Formules', function () {
+  describe('le gérant peut créer des formules', function () {
+    context('au mois', function () {
+      it('doit créer la formule', function () {
         // given
         const formules = new Formules();
 
         // when
-        formules.creer({ type: 'MOIS', prixBase: 10 });
+        formules.creer({ type: 'Mois', prixBase: 10 });
 
         // then
         const actual = formules.recuperer()[0];
-        expect(actual).to.deep.equal({ type: 'MOIS', prixBase: 10 });
+        expect(actual).to.deep.equal({ type: TypeAbonnement.Mois, prixBase: new PrixBase(10) });
       });
     });
-    // Les abonnements d’un an bénéficient de 10% de réduction
-    context("A l'année", function () {
-      it('should succeed', function () {
+    context("à l'année", function () {
+      it('doit créer la formule', function () {
         // given
         const formules = new Formules();
 
         // when
-        formules.creer({ type: 'ANNEE', prixBase: 20 });
+        formules.creer({ type: 'Année', prixBase: 20 });
 
         // then
         const actual = formules.recuperer()[0];
-        expect(actual).to.deep.equal({ type: 'ANNEE', prixBase: 20 });
+        expect(actual).to.deep.equal({ type: TypeAbonnement.Annee, prixBase: new PrixBase(20) });
       });
     });
   });
