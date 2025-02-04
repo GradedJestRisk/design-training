@@ -5,10 +5,10 @@ chai.use(chaiExclude);
 
 import { expect } from 'chai';
 
-import { Formules } from '../../src/formule/Formules.js';
-import { TypeAbonnement } from '../../src/formule/TypeAbonnement.js';
-import { PrixBase } from '../../src/formule/PrixBase.js';
-import { Reduction } from '../../src/formule/Reduction.js';
+import { Formules } from '../../../src/formule/domain/Formules.js';
+import { TypeAbonnement } from '../../../src/formule/domain/TypeAbonnement.js';
+import { PrixBase } from '../../../src/formule/domain/PrixBase.js';
+import { Reduction } from '../../../src/formule/domain/Reduction.js';
 describe('Unitaire - Formules', function () {
   describe('le gérant peut créer des formules', function () {
     context('pour les employés', function () {
