@@ -1,4 +1,10 @@
+import * as chai from 'chai';
+// eslint-disable-next-line node/no-unpublished-import
+import chaiExclude from 'chai-exclude';
+chai.use(chaiExclude);
+
 import { expect } from 'chai';
+
 import { Formules } from '../../src/formule/Formules.js';
 import { TypeAbonnement } from '../../src/formule/TypeAbonnement.js';
 import { PrixBase } from '../../src/formule/PrixBase.js';
@@ -16,11 +22,10 @@ describe('Unitaire - Formules', function () {
 
           // then
           const actual = formules.recuperer()[0];
-          expect(actual).to.deep.equal({
-            type: TypeAbonnement.Mois,
-            prixBase: new PrixBase(10),
-            reduction: new Reduction(0),
-          });
+          expect(actual.id).to.not.be.undefined;
+          expect(actual.type).to.deep.equal(TypeAbonnement.Mois);
+          expect(actual.prixBase).to.deep.equal(new PrixBase(10));
+          expect(actual.reduction).to.deep.equal(new Reduction(0));
         });
       });
       context("à l'année", function () {
@@ -33,11 +38,13 @@ describe('Unitaire - Formules', function () {
 
           // then
           const actual = formules.recuperer()[0];
-          expect(actual).to.deep.equal({
-            type: TypeAbonnement.Annee,
-            prixBase: new PrixBase(20),
-            reduction: new Reduction(10),
-          });
+          expect(actual)
+            .excluding('id')
+            .to.deep.equal({
+              type: TypeAbonnement.Annee,
+              prixBase: new PrixBase(20),
+              reduction: new Reduction(10),
+            });
         });
       });
     });
@@ -53,11 +60,13 @@ describe('Unitaire - Formules', function () {
 
           // then
           const actual = formules.recuperer()[0];
-          expect(actual).to.deep.equal({
-            type: TypeAbonnement.Mois,
-            prixBase: new PrixBase(10),
-            reduction: new Reduction(20),
-          });
+          expect(actual)
+            .excluding('id')
+            .to.deep.equal({
+              type: TypeAbonnement.Mois,
+              prixBase: new PrixBase(10),
+              reduction: new Reduction(20),
+            });
         });
       });
       context("à l'année", function () {
@@ -71,11 +80,13 @@ describe('Unitaire - Formules', function () {
 
           // then
           const actual = formules.recuperer()[0];
-          expect(actual).to.deep.equal({
-            type: TypeAbonnement.Annee,
-            prixBase: new PrixBase(10),
-            reduction: new Reduction(30),
-          });
+          expect(actual)
+            .excluding('id')
+            .to.deep.equal({
+              type: TypeAbonnement.Annee,
+              prixBase: new PrixBase(10),
+              reduction: new Reduction(30),
+            });
         });
       });
     });
